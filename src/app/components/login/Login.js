@@ -5,23 +5,21 @@ import logo from '../../../assets/images/emec-logo-blue.png';
 import './Login.css';
 
 class Login extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      email: '',
-      password: '',
-    };
-  }
+  state = {
+    email: '',
+    password: '',
+  };
 
   handleChange = (e) => {
-    console.log(e);
-    // this.setState({
-    //   name: value,
-    // });
+    const inputField = this.state;
+    inputField[e.target.name] = e.target.value;
+    console.log(this.state.email, this.state.password);
+    this.setState({ inputField });
   };
 
   handleSubmit = (e) => {
     e.preventDefault();
+    console.log('object');
   };
 
   render() {

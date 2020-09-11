@@ -37,8 +37,7 @@ input {
 }
 
 input::placeholder {
-  color: #ddd;
-  padding: 0 12px;
+  color: #888;
 }
 
 button {
